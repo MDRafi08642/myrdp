@@ -12,7 +12,7 @@ steps:
 
 -name: Download
 
-run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/... OutFile ngrok.zip
+run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
 
 -name: Extract
 
@@ -24,7 +24,7 @@ run: \ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN env:
 
 NGROK AUTH_TOKEN: S({ secrets.NGROK AUTH_TOKEN }}
 
-name: Enable TS
+-name: Enable TS
 
 run: Set-ItemProperty -Path 'HKLM\System CurrentControlSet\Control\Terminal Server-name
 
